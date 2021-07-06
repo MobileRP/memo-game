@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.wider-container {
+  width: 350px;
+  font-weight:bold
+}
+ol {
+  width: 100%;
+}
+span {width: 20%;  display:inline;
+}
+
+.left {
+  float: left
+}
+.right {
+  float: right
+}
+

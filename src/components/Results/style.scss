@@ -1,0 +1,26 @@
+@import 'src/colors';
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 25%;
+}
+.disclaimer {
+  color: $white;
+  font-weight: bold;
+  & h1 {
+    text-shadow: 15px 15px $darkGreen;
+  }
+}
+.scores-button {
+  display: flex;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: $yellow;
+  color: $green;
+  border-radius: 5px;
+}
+.scores-button:hover {
+  background-color: $white;
+}

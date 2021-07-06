@@ -1,0 +1,12 @@
+@import 'src/colors.scss';
+.screen-wrapper {
+  display: flex;
+  padding-top: 60px;
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-image: linear-gradient($lightGreen, $green);
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}

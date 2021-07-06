@@ -1,0 +1,89 @@
+@import 'src/colors';
+$main-font: 'Yanone Kaffeesatz', sans-serif;
+$new-white: rgb(248, 246, 234);
+$text-margin: 10px;
+
+.card {
+  padding: 0;
+  width: 20%;
+  margin: 2%;
+  position: relative;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  aspect-ratio: 0.72;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  &.covered {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+  .front,
+  .back {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: white;
+    box-shadow: 5px 5px 2px rgb(95, 77, 99);
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: -webkit-transform ease 500ms;
+    transition: transform ease 500ms;
+  }
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    & div {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      font-weight: bold;
+      color: $green;
+      font-size: 3em;
+    }
+  }
+  .back {
+    background: url('../../assets/back.png');
+    transform: rotateY(180deg);
+    padding: 20px;
+    font-size: 20px;
+    background-size: cover;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    width: 30%;
+    font-size: 3vw;
+  }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .card {
+    width: 20%;
+    font-size: 3vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+  .card {
+    width: 15%;
+  }
+}
+@media (min-width: 1280px) {
+  .card {
+    width: 15%;
+    margin: 1%;
+  }
+}
